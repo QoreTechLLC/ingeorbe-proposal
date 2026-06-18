@@ -8,6 +8,7 @@ import WhyChoose from "@/components/WhyChoose";
 import Team from "@/components/Team";
 import Industries from "@/components/Industries";
 import Testimonials from "@/components/Testimonials";
+import BIC from "@/components/BIC";
 import ConsultationCTA from "@/components/ConsultationCTA";
 import Footer from "@/components/Footer";
 
@@ -25,6 +26,7 @@ export default function Home() {
         <Team />
         <Industries />
         <Testimonials />
+        <BIC />
         <ConsultationCTA />
       </main>
       <Footer />
