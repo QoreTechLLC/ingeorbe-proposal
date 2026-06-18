@@ -1,0 +1,109 @@
+/* ==========================================================================
+   INGEORBE — DESIGN TOKENS
+   --------------------------------------------------------------------------
+   Every color used across the site is defined ONCE here as a CSS variable.
+   These are PLACEHOLDER values, chosen to be a coherent, professional
+   engineering palette — NOT the real Ingeorbe brand colors.
+
+   To apply real branding later: change the hex values in :root below.
+   Nothing else in the codebase needs to change. Components reference
+   Tailwind classes (bg-ink, text-signal, border-line, etc.) which are
+   wired to these variables in tailwind.config.ts.
+   ========================================================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* --- Placeholder palette -------------------------------------------- */
+  /* Stored as raw "R G B" channel triples (no rgb() wrapper) so Tailwind's
+     opacity modifiers — text-paper/80, border-paper/15, etc — work correctly.
+     Tailwind wraps these as rgb(var(--color-x) / <alpha>) in tailwind.config.ts.
+     To change a color: convert your hex to R G B and paste the three numbers. */
+
+  /* Backgrounds */
+  --color-paper: 247 245 240;          /* #f7f5f0 — primary page background, warm off-white */
+  --color-paper-raised: 255 255 255;   /* #ffffff — cards / raised surfaces */
+
+  /* Text + structure */
+  --color-ink: 22 36 61;               /* #16243d — primary text, headlines, dark sections */
+  --color-ink-soft: 60 74 97;          /* #3c4a61 — secondary headline weight */
+  --color-steel: 92 100 112;           /* #5c6470 — body copy, muted text */
+  --color-line: 221 217 208;           /* #ddd9d0 — hairline borders / dividers */
+
+  /* Single accent — used sparingly (CTAs, key data points, signature marks) */
+  --color-signal: 216 124 44;          /* #d87c2c */
+  --color-signal-soft: 243 227 210;    /* #f3e3d2 — tint of signal for subtle backgrounds */
+
+  /* --- Type --------------------------------------------------------- */
+  --font-display: "Inter Tight", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "Roboto Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: rgb(var(--color-paper));
+  color: rgb(var(--color-ink));
+  font-family: var(--font-body);
+}
+
+/* Visible keyboard focus, always */
+:focus-visible {
+  outline: 2px solid rgb(var(--color-signal));
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------
+   Signature element: corner tick-marks, like registration marks on a
+   technical / survey drawing. Used at section boundaries only — a
+   structural device, not decoration.
+   -------------------------------------------------------------------- */
+.tick-corner {
+  position: relative;
+}
+.tick-corner::before,
+.tick-corner::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid rgb(var(--color-signal));
+  opacity: 0.55;
+}
+.tick-corner::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+.tick-corner::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+}
+
+.label-mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
