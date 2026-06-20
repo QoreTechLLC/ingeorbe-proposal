@@ -153,30 +153,35 @@ export const services = [
 
 export const team = [
   {
-    name: "Nombre Apellido (placeholder)",
-    role: "Director General / Ingeniero Civil",
+    name: "Nombre Apellido",
+    role: "Cargo / Posición",
     photo: "/placeholder-portrait.svg",
   },
   {
-    name: "Nombre Apellido (placeholder)",
-    role: "Directora de Estudios de Tránsito",
+    name: "Nombre Apellido",
+    role: "Cargo / Posición",
     photo: "/placeholder-portrait.svg",
   },
   {
-    name: "Nombre Apellido (placeholder)",
-    role: "Coordinador de Interventoría",
+    name: "Nombre Apellido",
+    role: "Cargo / Posición",
     photo: "/placeholder-portrait.svg",
   },
 ];
 
 // Placeholder client logos — swap each src for the real client logo (SVG or PNG, transparent bg recommended).
 export const clientLogos = [
-  { name: "Cliente Placeholder 1", src: "/placeholder-logo.svg" },
-  { name: "Cliente Placeholder 2", src: "/placeholder-logo.svg" },
-  { name: "Cliente Placeholder 3", src: "/placeholder-logo.svg" },
-  { name: "Cliente Placeholder 4", src: "/placeholder-logo.svg" },
-  { name: "Cliente Placeholder 5", src: "/placeholder-logo.svg" },
-  { name: "Cliente Placeholder 6", src: "/placeholder-logo.svg" },
+  { name: "ANSV Logo", src: "/logos/ansv_logo.svg" },
+  { name: "CAF Logo", src: "/logos/caf_logo.svg" },
+  { name: "CDM Logo", src: "/logos/cdm_logo.svg" },
+  { name: "FONDO Logo", src: "/logos/fondo_logo.svg" },
+  { name: "IDU Logo", src: "/logos/idu_logo.svg" },
+  { name: "INVIAS Logo", src: "/logos/invias_logo.svg" },
+  { name: "KENNEDY Logo", src: "/logos/kennedy_logo.svg" },
+  { name: "MINTRANS Logo", src: "/logos/mintrans_logo.svg" },
+  { name: "UN Logo", src: "/logos/nacional_logo.svg" },
+  { name: "PARAGUAY Logo", src: "/logos/paraguay_logo.svg" },
+  { name: "SIGMA Logo", src: "/logos/sigma_logo.svg" },
 ];
 
 export const industries = [

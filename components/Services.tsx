@@ -48,7 +48,10 @@ export default function Services() {
               </p>
               <ul className="mt-6 space-y-1.5">
                 {service.benefits.map((b) => (
-                  <li key={b} className="text-xs text-ink-soft flex items-center gap-2">
+                  <li
+                    key={b}
+                    className="text-xs text-ink-soft flex items-center gap-2"
+                  >
                     <span className="w-1 h-1 bg-signal" aria-hidden />
                     {b}
                   </li>
@@ -84,17 +87,27 @@ export default function Services() {
             </button>
 
             <span className="label-mono text-steel">{active.code}</span>
-            <h3 id="service-modal-title" className="mt-4 font-display font-bold text-2xl lg:text-3xl text-ink leading-snug">
+            <h3
+              id="service-modal-title"
+              className="mt-4 font-display font-bold text-2xl lg:text-3xl text-ink leading-snug"
+            >
               {active.title}
             </h3>
-            <p className="mt-5 text-steel leading-relaxed">{active.longDescription}</p>
+            <p className="mt-5 text-steel leading-relaxed">
+              {active.longDescription}
+            </p>
 
             <div className="mt-8">
               <div className="label-mono text-steel mb-4">Cómo trabajamos</div>
               <ol className="space-y-3">
                 {active.process.map((step, i) => (
-                  <li key={step} className="flex items-start gap-3 text-sm text-ink-soft">
-                    <span className="label-mono text-signal shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                  <li
+                    key={step}
+                    className="flex items-start gap-3 text-sm text-ink-soft"
+                  >
+                    <span className="label-mono text-signal shrink-0">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
                     {step}
                   </li>
                 ))}
@@ -102,12 +115,19 @@ export default function Services() {
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <a
+              {/* <a
                 href={`/servicios/${active.slug}`}
                 className="px-6 py-3 bg-ink text-paper text-sm font-medium hover:bg-signal transition-colors"
               >
                 Ver página completa
               </a>
+              <a
+                href="#contacto"
+                onClick={() => setActiveIndex(null)}
+                className="px-6 py-3 border border-ink text-ink text-sm font-medium hover:border-signal hover:text-signal transition-colors"
+              >
+                Solicitar Consulta
+              </a> */}
               <a
                 href="#contacto"
                 onClick={() => setActiveIndex(null)}
