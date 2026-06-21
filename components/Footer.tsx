@@ -11,10 +11,12 @@ export default function Footer() {
       <div className="mx-auto max-w-site px-6 lg:px-10">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <div className="font-display font-bold text-lg text-paper">INGEORBE</div>
+            <div className="font-display font-bold text-lg text-paper">
+              INGEORBE
+            </div>
             <p className="mt-4 text-sm leading-relaxed text-paper/60 max-w-xs">
-              Ingeniería civil de excelencia. Consultoría, gerencia de proyectos e
-              interventoría en Bogotá, Colombia.
+              Ingeniería civil de excelencia. Consultoría, gerencia de proyectos
+              e interventoría en Bogotá, Colombia.
             </p>
           </div>
 
@@ -32,7 +34,10 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-paper/70 hover:text-signal transition-colors">
+                  <a
+                    href={link.href}
+                    className="text-paper/70 hover:text-signal transition-colors"
+                  >
                     {link.label}
                   </a>
                 </li>
@@ -49,7 +54,25 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-paper/15 flex flex-wrap gap-6 justify-between text-xs text-paper/50">
-          <span>© {new Date().getFullYear()} Ingeorbe S.A.S. Todos los derechos reservados.</span>
+          <span>
+            © {new Date().getFullYear()} Ingeorbe S.A.S. Todos los derechos
+            reservados.
+          </span>
+          <p
+            className="text-[12.5px]"
+            style={{ color: "rgba(255,255,255,0.4)" }}
+          >
+            Designed and developed by{" "}
+            <a
+              href="https://qoretech.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium hover:text-white transition-colors"
+              style={{ color: "rgba(255,255,255,0.6)" }}
+            >
+              Qoretech LLC
+            </a>
+          </p>
           <a href="/privacidad" className="hover:text-paper/80">
             Política de Privacidad
           </a>
